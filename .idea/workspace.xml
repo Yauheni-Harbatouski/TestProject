@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="All Places" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="49e18e07-a4ca-42f0-afbf-411440b76891" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1afbT75gKxG3jkn3UQ0MDRkwW5s" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ui" />
+      <recent name="api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\WORK\EPAM\apiuitest\src\main\resources" />
+      <recent name="H:\WORK\EPAM\apiuitest\src\main\java\ui\site\logic" />
+      <recent name="H:\WORK\EPAM\apiuitest\src\main\java\core\utils" />
+      <recent name="H:\WORK\EPAM\apiuitest\src\main\java\core\configs" />
+      <recent name="H:\WORK\EPAM\apiuitest\src\main\java\core\listeners" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="ui.site.homepage.blocks.homecontent" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\WORK\EPAM\apiuitest\src\main\java\core\configs" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.MainTest">
+    <configuration name="MainTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiuitest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui" />
+      <option name="MAIN_CLASS_NAME" value="ui.MainTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.listResourceUITest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiuitest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui" />
+      <option name="MAIN_CLASS_NAME" value="ui.MainTest" />
+      <option name="METHOD_NAME" value="listResourceUITest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.loginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiuitest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui" />
+      <option name="MAIN_CLASS_NAME" value="ui.MainTest" />
+      <option name="METHOD_NAME" value="loginTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.registerUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiuitest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui" />
+      <option name="MAIN_CLASS_NAME" value="ui.MainTest" />
+      <option name="METHOD_NAME" value="registerUserTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.singleResourceNotFoundUITest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiuitest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui" />
+      <option name="MAIN_CLASS_NAME" value="ui.MainTest" />
+      <option name="METHOD_NAME" value="singleResourceNotFoundUITest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.MainTest" />
+        <item itemvalue="TestNG.MainTest.listResourceUITest" />
+        <item itemvalue="TestNG.MainTest.singleResourceNotFoundUITest" />
+        <item itemvalue="TestNG.MainTest.registerUserTest" />
+        <item itemvalue="TestNG.MainTest.loginTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="49e18e07-a4ca-42f0-afbf-411440b76891" name="Default Changelist" comment="" />
+      <created>1587129599641</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587129599641</updated>
+      <workItem from="1587129600860" duration="179000" />
+      <workItem from="1587129811919" duration="1043000" />
+      <workItem from="1587130912336" duration="11000" />
+      <workItem from="1587130945089" duration="433000" />
+      <workItem from="1587131403008" duration="1681000" />
+      <workItem from="1587133176906" duration="2722000" />
+      <workItem from="1587136171201" duration="328000" />
+      <workItem from="1587136784601" duration="773000" />
+      <workItem from="1587188797148" duration="10392000" />
+      <workItem from="1587311341041" duration="929000" />
+      <workItem from="1587362384534" duration="45508000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
