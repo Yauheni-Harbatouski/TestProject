@@ -1,5 +1,3 @@
-package ui;
-
 import core.configs.basetest.BaseTest;
 import core.listeners.SelenideListener;
 import io.qameta.allure.Epic;
@@ -34,7 +32,11 @@ public class MainTest extends BaseTest {
     @Test(description = "тест статуса каждого endpoint-а (UI)", dataProvider = "endpoint name and response", priority = 0)
     public void endpointsStatusCodeTest(String endpointName, String response) {
         //нажать по каждому endpoint
-        homePage.endpointsBlock.getEndpoints().findBy(text(endpointName)).click();
+        homePage
+                .endpointsBlock
+                .getEndpoints()
+                .findBy(text(endpointName))
+                .click();
         //response соответствует указанному:
 //        "LIST USERS", "200"
 //        "SINGLE USER", "200"
@@ -50,14 +52,21 @@ public class MainTest extends BaseTest {
 //        "LOGIN - SUCCESSFUL", "200"
 //        "LOGIN - UNSUCCESSFUL", "400"
 //        "DELAYED RESPONSE", "200"
-        homePage.endpointsBlock.getResponseStatus().shouldBe(text(response));
+        homePage
+                .endpointsBlock
+                .getResponseStatus()
+                .shouldBe(text(response));
     }
 
 
     @Test(priority = 1)
     public void listUsersPageUITest() {
         //нажать на LIST USERS "//api/users?page=2"
-        homePage.endpointsBlock.getEndpoints().findBy(text("LIST USERS")).click();
+        homePage
+                .endpointsBlock
+                .getEndpoints()
+                .findBy(text("LIST USERS"))
+                .click();
         // отображается json второй страницы  пользователей в блоке response
         assertTrue(homePage.endpointsBlock.getResponseBlock().text().contains("\"page\": 2"));
     }
@@ -66,15 +75,21 @@ public class MainTest extends BaseTest {
     @Test(priority = 1)
     public void listUsersStatusCodeAndActivePageApiTest() {
         // при get запросе (/api/users?page=2) загружается json второй страницы  пользователей   и статус код 200
-        apiOperations.checkJsonObject("/api/users?page=2", 200, "page", "2");
+        apiOperations
+                .checkJsonObject("/api/users?page=2", 200, "page", "2");
     }
 
     @Test(priority = 2)
     public void singleUserUITest() {
         //нажать на SINGLE USER "//api/users/2"
-        homePage.endpointsBlock.getEndpoints().findBy(text("SINGLE USER")).click();
+        homePage.endpointsBlock
+                .getEndpoints()
+                .findBy(text("SINGLE USER"))
+                .click();
         // отображается пользователь с "id" = 2,
-        homePage.endpointsBlock.getResponseBlock().shouldBe(text("\"id\": 2"));
+        homePage.endpointsBlock
+                .getResponseBlock()
+                .shouldBe(text("\"id\": 2"));
     }
 
     @Test(priority = 3)
@@ -87,9 +102,15 @@ public class MainTest extends BaseTest {
     @Test(priority = 4)
     public void singleUserNotFoundUITest() {
         //нажать на SINGLE USER NOT FOUND "/api/users/23"
-        homePage.endpointsBlock.getEndpoints().findBy(text("SINGLE USER NOT FOUND")).click();
+        homePage.endpointsBlock
+                .getEndpoints()
+                .findBy(text("SINGLE USER NOT FOUND"))
+                .click();
         // отображается пустой json
-        homePage.endpointsBlock.getResponseBlock().shouldBe(text("{}"));
+        homePage
+                .endpointsBlock
+                .getResponseBlock()
+                .shouldBe(text("{}"));
     }
 
     @Test(priority = 5)
@@ -101,9 +122,15 @@ public class MainTest extends BaseTest {
     @Test(priority = 6)
     public void listResourceUITest() {
         //нажать на LIST <RESOURCE> "/api/unknown"
-        homePage.endpointsBlock.getEndpoints().findBy(text("LIST <RESOURCE>")).click();
+        homePage.endpointsBlock
+                .getEndpoints()
+                .findBy(text("LIST <RESOURCE>"))
+                .click();
         // установлено свойство "per_page": 6
-        homePage.endpointsBlock.getResponseBlock().shouldBe(text("\"per_page\": 6"));
+        homePage
+                .endpointsBlock
+                .getResponseBlock()
+                .shouldBe(text("\"per_page\": 6"));
     }
 
     @Test(priority = 7)
@@ -116,9 +143,14 @@ public class MainTest extends BaseTest {
     @Test(priority = 8)
     public void singleResourceUITest() {
         //нажать на SINGLE <RESOURCE> "/api/unknown/2"
-        homePage.endpointsBlock.getEndpoints().findBy(text("SINGLE <RESOURCE>")).click();
+        homePage.endpointsBlock
+                .getEndpoints()
+                .findBy(text("SINGLE <RESOURCE>")).click();
         // установлено свойство "company": "StatusCode Weekly"
-        homePage.endpointsBlock.getResponseBlock().shouldBe(text("\"company\": \"StatusCode Weekly\""));
+        homePage
+                .endpointsBlock
+                .getResponseBlock()
+                .shouldBe(text("\"company\": \"StatusCode Weekly\""));
     }
 
     @Test(priority = 9)
@@ -131,9 +163,15 @@ public class MainTest extends BaseTest {
     @Test(priority = 10)
     public void singleResourceNotFoundUITest() {
         //нажать на SINGLE <RESOURCE> NOT FOUND "//api/unknown/23"
-        homePage.endpointsBlock.getEndpoints().findBy(text("SINGLE <RESOURCE> NOT FOUND")).click();
+        homePage.endpointsBlock
+                .getEndpoints()
+                .findBy(text("SINGLE <RESOURCE> NOT FOUND"))
+                .click();
         // отображается пустой json
-        homePage.endpointsBlock.getResponseBlock().shouldBe(text("{}"));
+        homePage
+                .endpointsBlock
+                .getResponseBlock()
+                .shouldBe(text("{}"));
     }
 
     @Test(priority = 11)
@@ -153,13 +191,22 @@ public class MainTest extends BaseTest {
         //}
         // приходит статус код 201 и id созданного user-a
 
-        String idCreated = apiOperations.createUser("TestUser" + randomNumeric(3), "RandomJob" + randomNumeric(3));
+        String idCreated = apiOperations
+                .createUser("TestUser" + randomNumeric(3), "RandomJob" + randomNumeric(3));
 
         //нажать  на LIST USERS через UI
-        homePage.endpointsBlock.getEndpoints().findBy(text("LIST USERS")).click();
+        homePage.endpointsBlock
+                .getEndpoints()
+                .findBy(text("LIST USERS"))
+                .click();
 
         // отображается пользователь с "id" созданным id через api
-        Assert.assertTrue(homePage.endpointsBlock.getResponseBlock().text().contains("\"id\": " + idCreated), "User с id:" + idCreated + " не был создан");
+        Assert.assertTrue(homePage
+                .endpointsBlock
+                .getResponseBlock()
+                .text()
+                .contains("\"id\": " + idCreated),
+                "User с id:" + idCreated + " не был создан");
     }
 
 
@@ -176,10 +223,19 @@ public class MainTest extends BaseTest {
         apiOperations.updateUser("2", "TestUser", "RandomJob");
 
         //нажать на SINGLE USER через UI
-        homePage.endpointsBlock.getEndpoints().findBy(text("SINGLE USER")).click();
+        homePage
+                .endpointsBlock
+                .getEndpoints()
+                .findBy(text("SINGLE USER"))
+                .click();
 
         // отображается пользователь <2>  с измененными данными через PUT
-        Assert.assertTrue(homePage.endpointsBlock.getResponseBlock().text().contains("TestUser"), "метод PUT не изменил пользователя с id: 2");
+        Assert.assertTrue(homePage
+                .endpointsBlock
+                .getResponseBlock()
+                .text()
+                .contains("TestUser"),
+                "метод PUT не изменил пользователя с id: 2");
     }
 
 
@@ -193,10 +249,18 @@ public class MainTest extends BaseTest {
         apiOperations.deleteUser("2");
 
         //нажать а SINGLE USER  через UI
-        homePage.endpointsBlock.getEndpoints().findBy(text("SINGLE USER")).click();
+        homePage
+                .endpointsBlock
+                .getEndpoints()
+                .findBy(text("SINGLE USER"))
+                .click();
 
         // не отображается user с id=2
-        Assert.assertFalse(homePage.endpointsBlock.getResponseBlock().text().contains("\"id\": 2"), "метод DELETE не удалил user с id: 2");
+        Assert.assertFalse(homePage.endpointsBlock
+                .getResponseBlock()
+                .text()
+                .contains("\"id\": 2"),
+                "метод DELETE не удалил user с id: 2");
     }
 
 
@@ -210,13 +274,23 @@ public class MainTest extends BaseTest {
         //}
         // приходит статус код 200 и id созданного user-a
 
-        String idCreated = apiOperations.registerUser("eve.holt@reqres.in", "pistol");
+        String idCreated = apiOperations
+                .registerUser("eve.holt@reqres.in", "pistol");
 
-        //нажать на SINGLE USER через UI
-        homePage.endpointsBlock.getEndpoints().findBy(text("LIST USERS")).click();
+        //нажать на LIST USERS через UI
+        homePage
+                .endpointsBlock
+                .getEndpoints()
+                .findBy(text("LIST USERS"))
+                .click();
 
         // отображается пользователь с "id" созданным id через api
-        Assert.assertTrue(homePage.endpointsBlock.getResponseBlock().text().contains("\"id\": " + idCreated), "User с id:" + idCreated + " не найден");
+        Assert.assertTrue(homePage
+                .endpointsBlock
+                .getResponseBlock()
+                .text()
+                .contains("\"id\": " + idCreated),
+                "User с id:" + idCreated + " не найден");
     }
 
 
@@ -229,7 +303,8 @@ public class MainTest extends BaseTest {
         // }
         // приходит статус код 400 и ошибка создания пользователя
 
-        String errorMessage = apiOperations.registerWithoutPassword(randomAlphabetic(5) + "@gmail.com");
+        String errorMessage = apiOperations
+                .registerWithoutPassword(randomAlphabetic(5) + "@gmail.com");
         Assert.assertEquals(errorMessage, "Missing password");
     }
 
@@ -246,9 +321,15 @@ public class MainTest extends BaseTest {
         apiOperations.loginUser("eve.holt@reqres.in", "cityslicka");
 
         //нажать на LOGIN - SUCCESSFUL "/api/login" через UI
-        homePage.endpointsBlock.getEndpoints().findBy(text("LOGIN - SUCCESSFUL")).click();
+        homePage.endpointsBlock
+                .getEndpoints()
+                .findBy(text("LOGIN - SUCCESSFUL"))
+                .click();
         // отображается json c токеном
-        homePage.endpointsBlock.getResponseBlock().shouldBe(text("token"));
+        homePage
+                .endpointsBlock
+                .getResponseBlock()
+                .shouldBe(text("token"));
 
     }
 
@@ -266,11 +347,18 @@ public class MainTest extends BaseTest {
         Assert.assertEquals(errorMessage, "Missing password");
 
         //нажать на LOGIN - UNSUCCESSFUL "/api/login" через UI
-        homePage.endpointsBlock.getEndpoints().findBy(text("LOGIN - UNSUCCESSFUL")).click();
+        homePage
+                .endpointsBlock
+                .getEndpoints()
+                .findBy(text("LOGIN - UNSUCCESSFUL"))
+                .click();
 
         // отображается json c ошибкой
 
-        homePage.endpointsBlock.getResponseBlock().shouldBe(text(" \"error\": \"Missing password\""));
+        homePage
+                .endpointsBlock
+                .getResponseBlock()
+                .shouldBe(text(" \"error\": \"Missing password\""));
 
     }
 
@@ -286,11 +374,20 @@ public class MainTest extends BaseTest {
 
         //нажать на DELAYED RESPONSE "/api/delay=3" через UI
 
-        homePage.endpointsBlock.getEndpoints().findBy(text("DELAYED RESPONSE")).click();
+        homePage
+                .endpointsBlock
+                .getEndpoints()
+                .findBy(text("DELAYED RESPONSE"))
+                .click();
         long start = System.currentTimeMillis();
 
         // через 3 секунды отображается json с текстом "total":12
-        homePage.endpointsBlock.getResponseBlock().shouldBe(text("\"total\": 12,"));
+
+        homePage
+                .endpointsBlock
+                .getResponseBlock()
+                .shouldBe(text("\"total\": 12,"));
+
         long finish = System.currentTimeMillis();
         long timeConsumedMillis = finish - start;
         assertTrue(timeConsumedMillis > 3000 & timeConsumedMillis < 4000);

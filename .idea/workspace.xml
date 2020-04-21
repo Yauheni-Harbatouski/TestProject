@@ -37,9 +37,17 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\WORK\EPAM\apiuitest\src\main\java\core\configs" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="ui" />
       <recent name="api" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="ui.site.homepage.blocks.homecontent" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\WORK\EPAM\apiuitest\src\main\resources" />
@@ -47,13 +55,6 @@
       <recent name="H:\WORK\EPAM\apiuitest\src\main\java\core\utils" />
       <recent name="H:\WORK\EPAM\apiuitest\src\main\java\core\configs" />
       <recent name="H:\WORK\EPAM\apiuitest\src\main\java\core\listeners" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-      <recent name="ui.site.homepage.blocks.homecontent" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\WORK\EPAM\apiuitest\src\main\java\core\configs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -73,12 +74,12 @@
       <module name="apiuitest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui" />
-      <option name="MAIN_CLASS_NAME" value="ui.MainTest" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -90,12 +91,12 @@
       <module name="apiuitest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui" />
-      <option name="MAIN_CLASS_NAME" value="ui.MainTest" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
       <option name="METHOD_NAME" value="listResourceUITest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -108,12 +109,12 @@
       <module name="apiuitest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui" />
-      <option name="MAIN_CLASS_NAME" value="ui.MainTest" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
       <option name="METHOD_NAME" value="loginTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -126,12 +127,12 @@
       <module name="apiuitest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui" />
-      <option name="MAIN_CLASS_NAME" value="ui.MainTest" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
       <option name="METHOD_NAME" value="registerUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -144,12 +145,12 @@
       <module name="apiuitest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui" />
-      <option name="MAIN_CLASS_NAME" value="ui.MainTest" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
       <option name="METHOD_NAME" value="singleResourceNotFoundUITest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -189,6 +190,10 @@
       <workItem from="1587188797148" duration="10392000" />
       <workItem from="1587311341041" duration="929000" />
       <workItem from="1587362384534" duration="45508000" />
+      <workItem from="1587412420921" duration="32000" />
+      <workItem from="1587412455323" duration="70000" />
+      <workItem from="1587412628115" duration="3000" />
+      <workItem from="1587454758923" duration="815000" />
     </task>
     <servers />
   </component>
